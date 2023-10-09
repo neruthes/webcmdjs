@@ -33,7 +33,7 @@ The world of authentication is sophisticated and we will not mandate any paradig
 Take the example of SSH.
 Imagine that your customer Alice is submitting a support ticket in an SSH session.
 This library provides the `bash` on the surface and you have to implement your own `sshd`
-which feeds `USER`, `UID`, and `GID` as "environment variables" for the `bash` process.
+which feeds `USER`, `UID`, and `GID` as *environment variables* for the `bash` process.
 
 
 
@@ -43,7 +43,7 @@ which feeds `USER`, `UID`, and `GID` as "environment variables" for the `bash` p
 
 ### Basic Example
 
-#### Create Application
+#### Creating Application
 
 ```js
 const webcmd = require('webcmdjs').createApp();
@@ -55,7 +55,7 @@ webcmd.define('echo', function (data) {
 });
 ```
 
-#### Listen Port
+#### Listening Port
 
 ```js
 const http = require('http');

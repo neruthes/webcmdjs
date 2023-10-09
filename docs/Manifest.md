@@ -31,7 +31,7 @@ As a user of this library, you should handle authentication with your own measur
 The world of authentication is sophisticated and we will not mandate any paradigm for authentication.
 
 Take the example of SSH.
-Imagine that your costumer Alice is submitting a support ticket in an SSH session.
+Imagine that your customer Alice is submitting a support ticket in an SSH session.
 This library provides the `bash` on the surface and you have to implement your own `sshd`
 which feeds `USER`, `UID`, and `GID` as "environment variables" for the `bash` process.
 

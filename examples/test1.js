@@ -9,7 +9,8 @@ webcmd.define('hello', function (data) {
 });
 webcmd.define('echo', function (data) {
     data.res.writeHead(200);
-    data.res.write(`Hello, user ${data.env.uid} (token=${data.env.token})\nYour text input is:\n`);
+    data.res.write(`Hello, user ${data.env.uid} (token=${data.env.token})\n`);
+    data.res.write(`Your text input is:\n`);
     data.res.end(data.args.text);
 });
 
@@ -66,5 +67,8 @@ http.createServer(function (req, res) {
 
 /* ========================================= //
 Test commands:
-curl -X POST --data '{"cmd": "echo", "args": {"text": "Loerm ipsum dolor sit amet"}}' -H 'token: 1145141919810' 'http://localhost:12349/api/webcmd'
+curl -X POST --data \
+    '{"cmd": "echo", "args": {"text": "Loerm ipsum dolor sit amet"}}' \
+    -H 'token: 1145141919810' \
+    'http://localhost:12349/api/webcmd'
 // ========================================= */
